@@ -1,0 +1,41 @@
+.not-found-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, rgba(0, 172, 193, 0.7), rgba(247, 95, 0, 0.7)); /* Gradient background */
+  color: white;
+  text-align: center;
+}
+
+.not-found-content {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 40px 60px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.not-found-title {
+  font-size: 120px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  letter-spacing: 5px;
+}
+
+.not-found-message {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.not-found-link {
+  font-size: 1.2rem;
+  color: #f39c12;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    color: #ffeb3b;
+    transform: scale(1.1);
+  }
+}

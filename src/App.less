@@ -1,5 +1,9 @@
-.App {
-  text-align: center;
+.app-container {
+  //background-image: url("./images/date-night-bg.webp");
+  background-size: cover;
+  background: white fixed center;   //radial-gradient(circle, #f5f7fa, #c3cfe2)
+  flex-direction: column;
+  justify-content: center
 }
 
 .App-logo {
@@ -53,4 +57,13 @@
   background-position: inherit;
   filter: blur(8px);
   z-index: -1; /* Make sure it stays behind the content */
+}
+
+.content-container{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 20px 0 20px;
 }

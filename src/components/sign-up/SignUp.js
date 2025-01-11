@@ -14,10 +14,9 @@ import Stack from '@mui/material/Stack';
 import MuiCard from '@mui/material/Card';
 import { styled } from '@mui/material/styles';
 import AppTheme from '../shared-theme/AppTheme';
-import { GoogleIcon, FacebookIcon } from './CustomIcons';
+import {GoogleIcon, FacebookIcon, NTechIcon} from './CustomIcons';
 import ColorModeSelect from '../shared-theme/ColorModeSelect';
-import {Icon} from "@mui/material";
-// import ntechLogo from './src/images/ntech-logo.png'
+import {useNavigate} from "react-router-dom";
 
 const Card = styled(MuiCard)(({ theme }) => ({
   display: 'flex',
@@ -39,7 +38,7 @@ const Card = styled(MuiCard)(({ theme }) => ({
 }));
 
 const SignUpContainer = styled(Stack)(({ theme }) => ({
-  height: 'calc((1 - var(--template-frame-height, 0)) * 100dvh)',
+  // height: 'calc((1 - var(--template-frame-height, 0)) * 100dvh)',
   minHeight: '100%',
   padding: theme.spacing(2),
   [theme.breakpoints.up('sm')]: {
@@ -68,6 +67,8 @@ export default function SignUp(props) {
   const [passwordErrorMessage, setPasswordErrorMessage] = React.useState('');
   const [nameError, setNameError] = React.useState(false);
   const [nameErrorMessage, setNameErrorMessage] = React.useState('');
+
+  const navigate = useNavigate();
 
   const validateInputs = () => {
     const email = document.getElementById('email');
@@ -102,7 +103,6 @@ export default function SignUp(props) {
       setNameError(false);
       setNameErrorMessage('');
     }
-
     return isValid;
   };
 
@@ -118,6 +118,7 @@ export default function SignUp(props) {
       email: data.get('email'),
       password: data.get('password'),
     });
+    navigate("/home");
   };
 
   return (
@@ -126,14 +127,7 @@ export default function SignUp(props) {
       <ColorModeSelect sx={{ position: 'fixed', top: '1rem', right: '1rem' }} />
       <SignUpContainer direction="column" justifyContent="space-between">
         <Card variant="outlined">
-          {/*<SitemarkIcon />*/}
-          <Icon sx={{ height: 40, width: 130 }}>
-            <img
-                src="https://static.wixstatic.com/media/54c3a8_37c6dc7d50a44e9b9eac56f352f07a04~mv2.png/v1/fill/w_439,h_143,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/ntechlogo.png"  // Replace with the path to your image
-                alt="Custom Icon"
-                style={{width: '100%', height: '100%'}}
-            />
-          </Icon>
+          <NTechIcon />
           <Typography
             component="h1"
             variant="h4"

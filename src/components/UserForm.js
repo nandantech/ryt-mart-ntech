@@ -41,17 +41,17 @@ function UserForm() {
 
   // Inline styles for background image and the form
   const pageStyles = {
-    backgroundImage: 'url("./images/date-night-bg.webp")', // Add the relative path to your image
-    backgroundSize: 'cover', // Ensure it covers the entire screen
-    backgroundPosition: 'center',
-    height: '100vh',
-   // display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
+    // backgroundImage: 'url("./images/date-night-bg.webp")', // Add the relative path to your image
+    backgroundSize: "cover", // Ensure it covers the entire screen
+    backgroundPosition: "center",
+    height: "100vh",
+    // display: 'flex',
+    justifyContent: "center",
+    alignItems: "center",
   };
 
   const formStyles = {
-    backgroundColor: "rgba(245, 245, 245, 0.9)",  // Light gray with slight opacity
+    backgroundColor: "rgba(245, 245, 245, 0.9)", // Light gray with slight opacity
     borderRadius: "10px",
     padding: "30px",
     boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
@@ -85,7 +85,9 @@ function UserForm() {
         <form onSubmit={handleSubmit} style={formStyles}>
           <div className="row mb-3">
             <div className="col-md-4">
-              <label htmlFor="firstName" style={labelStyles}>First Name</label>
+              <label htmlFor="firstName" style={labelStyles}>
+                First Name
+              </label>
             </div>
             <div className="col-md-8">
               <input
@@ -103,7 +105,9 @@ function UserForm() {
 
           <div className="row mb-3">
             <div className="col-md-4">
-              <label htmlFor="lastName" style={labelStyles}>Last Name</label>
+              <label htmlFor="lastName" style={labelStyles}>
+                Last Name
+              </label>
             </div>
             <div className="col-md-8">
               <input
@@ -121,7 +125,9 @@ function UserForm() {
 
           <div className="row mb-3">
             <div className="col-md-4">
-              <label className="form-label" style={labelStyles}>Gender</label>
+              <label className="form-label" style={labelStyles}>
+                Gender
+              </label>
             </div>
             <div className="col-md-8">
               <div className="form-check form-check-inline">
@@ -133,7 +139,13 @@ function UserForm() {
                   onChange={handleChange}
                   className="form-check-input"
                 />
-                <label htmlFor="male" className="form-check-label" style={labelStyles}>Male</label>
+                <label
+                  htmlFor="male"
+                  className="form-check-label"
+                  style={labelStyles}
+                >
+                  Male
+                </label>
               </div>
               <div className="form-check form-check-inline">
                 <input
@@ -144,14 +156,22 @@ function UserForm() {
                   onChange={handleChange}
                   className="form-check-input"
                 />
-                <label htmlFor="female" className="form-check-label" style={labelStyles}>Female</label>
+                <label
+                  htmlFor="female"
+                  className="form-check-label"
+                  style={labelStyles}
+                >
+                  Female
+                </label>
               </div>
             </div>
           </div>
 
           <div className="row mb-3">
             <div className="col-md-4">
-              <label htmlFor="street" style={labelStyles}>Street Address</label>
+              <label htmlFor="street" style={labelStyles}>
+                Street Address
+              </label>
             </div>
             <div className="col-md-8">
               <input
@@ -169,7 +189,9 @@ function UserForm() {
 
           <div className="row mb-3">
             <div className="col-md-4">
-              <label htmlFor="city" style={labelStyles}>City</label>
+              <label htmlFor="city" style={labelStyles}>
+                City
+              </label>
             </div>
             <div className="col-md-8">
               <input
@@ -187,7 +209,9 @@ function UserForm() {
 
           <div className="row mb-3">
             <div className="col-md-4">
-              <label htmlFor="state" style={labelStyles}>State</label>
+              <label htmlFor="state" style={labelStyles}>
+                State
+              </label>
             </div>
             <div className="col-md-8">
               <input
@@ -205,7 +229,9 @@ function UserForm() {
 
           <div className="row mb-3">
             <div className="col-md-4">
-              <label htmlFor="zip" style={labelStyles}>Zip Code</label>
+              <label htmlFor="zip" style={labelStyles}>
+                Zip Code
+              </label>
             </div>
             <div className="col-md-8">
               <input
@@ -223,7 +249,9 @@ function UserForm() {
 
           <div className="row mb-3">
             <div className="col-md-4">
-              <label htmlFor="email" style={labelStyles}>Email</label>
+              <label htmlFor="email" style={labelStyles}>
+                Email
+              </label>
             </div>
             <div className="col-md-8">
               <input
@@ -241,7 +269,9 @@ function UserForm() {
 
           <div className="row mb-3">
             <div className="col-md-4">
-              <label htmlFor="phone" style={labelStyles}>Phone Number</label>
+              <label htmlFor="phone" style={labelStyles}>
+                Phone Number
+              </label>
             </div>
             <div className="col-md-8">
               <input
@@ -257,7 +287,18 @@ function UserForm() {
             </div>
           </div>
 
-          <button type="submit" className="btn btn-lg w-100 mt-4" style={{ background: "gray", color: "white", border: "none", borderRadius: "5px", fontSize: "1.1rem", padding: "12px 0" }}>
+          <button
+            type="submit"
+            className="btn btn-lg w-100 mt-4"
+            style={{
+              background: "gray",
+              color: "white",
+              border: "none",
+              borderRadius: "5px",
+              fontSize: "1.1rem",
+              padding: "12px 0",
+            }}
+          >
             Submit Reservation
           </button>
         </form>

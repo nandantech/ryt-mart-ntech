@@ -3,6 +3,8 @@ import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import "./Services.less";
 import ServiceCard from "../Card/ServiceCard";
+import { Suspense } from "react";
+import CardSkeleton from "../Skeleton/CardSkeleton";
 
 const categories = [
   {
@@ -18,7 +20,7 @@ const categories = [
     key: "drinks",
     options: ["Wine", "Cocktail", "Mocktail", "Juice"],
     image:
-      "https://demitris.com/cdn/shop/articles/image1_eb503a8a-f1e9-4bb0-ac55-fd0942ae5c95.png?v=1648496730", // Replace with actual image path
+      "https://demitris.com/cdn/shop/articles/image1_eb503a8a-f1e9-4bb0-ac55-fd0942ae5c95.png?v=1648496730", // Should replace with our personal space location( AWS S3 maybe)
     description: "Find the perfect drink to complement your evening.",
   },
   {
@@ -74,7 +76,9 @@ const Services = () => {
         </div>
         <div className={"cards-container"}>
           {categories.map((category) => (
-            <ServiceCard key={category.key} details={category} />
+            <Suspense key={category.key} fallback={<CardSkeleton />}>
+              <ServiceCard details={category} />
+            </Suspense>
           ))}
         </div>
       </Paper>

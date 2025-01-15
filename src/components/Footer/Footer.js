@@ -1,6 +1,5 @@
 import "./Footer.less";
 import { Facebook, LinkedIn, Twitter } from "@mui/icons-material";
-import Container from "@mui/material/Container";
 import { Grid2 as Grid } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
@@ -75,10 +74,7 @@ const Footer = () => {
         </Grid>
       </div>
       <div className={"footer-strip"}>
-        <p>
-          Copyright &copy; 2025 All Rights Reserved by
-          <a href="#"> Ntech</a>.
-        </p>
+        <p>Copyright &copy; 2025 All Rights Reserved by Ntech</p>
       </div>
     </footer>
   );

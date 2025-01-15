@@ -1,5 +1,30 @@
 footer{
   //width: 100vw;
-  height: 200px;
+  min-height: 250px;
   background-color: #1a1e21;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+.footer-content p{
+  color: gray;
+  text-align: justify;
+}
+li{
+  color: gray;
+}
+.footer-strip{
+  background-color: black;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  >p {
+    margin: 0;
+    > a {
+      color: white;
+      text-decoration: none;
+    }
+  }
 }

@@ -21,6 +21,7 @@ const settings = ["Profile", "Account", "Dashboard", "Logout"];
 // Todo: Move this to redux state and also use this in 404 not found page for "Back to Home"
 const menuList = [
   { name: "Sign Up", path: "/signup" },
+  { name: "Email Verification", path: "/email-verification" },
   { name: "Home", path: "/home" },
   { name: "Services", path: "/services" },
   { name: "Register User", path: "/registration" },

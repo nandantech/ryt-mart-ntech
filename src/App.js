@@ -15,6 +15,7 @@ import NotFound from "./components/NotFound/NotFound";
 import SignUp from "./components/sign-up/SignUp";
 import Services from "./components/Services/Services";
 import Footer from "./components/Footer/Footer";
+import EmailVerification from "./components/EmailVerification/EmailVerification";
 
 const App = () => {
   return (
@@ -40,6 +41,7 @@ const AppContent = () => {
             <Routes>
               <Route path="/home" element={<Home />} />
               <Route path="/registration" element={<UserForm />} />
+              <Route path="/email-verification" element={<EmailVerification />} />
               <Route path="/services" element={<Services />} />
               <Route
                 path="/register-restaurant"

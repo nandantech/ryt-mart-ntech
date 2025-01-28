@@ -22,6 +22,7 @@ const settings = ["Profile", "Account", "Dashboard", "Logout"];
 const menuList = [
   { name: "Sign Up", path: "/signup" },
   { name: "Email Verification", path: "/email-verification" },
+  { name: "Sign In", path: "/signin" },
   { name: "Home", path: "/home" },
   { name: "Services", path: "/services" },
   { name: "Register User", path: "/registration" },
